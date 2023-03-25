@@ -48,3 +48,8 @@ https://github.com/hiqermod<br>
 https://github.com/omer0909<br>
 
 We welcome contributions! If you'd like to help improve FT_Transcendence, please feel free to create a pull request or open an issue on GitHub.<br>
+
+<img width="2091" alt="Ekran Resmi 2023-03-25 ÖS 2 26 20" src="https://user-images.githubusercontent.com/94300378/227714698-7140a7b7-a1ba-4f1f-9a68-45b9cf3aa45b.png">
+
+
+
