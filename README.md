@@ -44,4 +44,4 @@ https://github.com/canodis
 https://github.com/hiqermod
 https://github.com/omer0909
 
-We welcome contributions! If you'd like to help improve FT_Transcendence, please feel free to create a pull request or open an issue on GitHub.e
+We welcome contributions! If you'd like to help improve FT_Transcendence, please feel free to create a pull request or open an issue on GitHub.
