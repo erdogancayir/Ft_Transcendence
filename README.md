@@ -39,7 +39,7 @@ User profiles with avatars, statuses, and customizable display names<br>
 Online games, such as Pong and Chess<br>
 Real-time updates and notifications for messages and game events<br>
 Admin dashboard with user management and moderation tools<br>
-
+Authenticator with Qr Code (collapsible)
 
 ### Contributors<br>
 https://github.com/erdogancayir<br>
