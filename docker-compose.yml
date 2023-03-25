@@ -1,0 +1,86 @@
+version: "2.2"
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
+
+volumes: #yedekleme
+
+  frontendd:
+    name: frontendd
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /root/data/frontend
+
+  webapii:
+    name: webapii
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /root/data/webapi
+
+services: #containerlar
+  postgresql:
+    container_name: postgresql
+    build: ./requirements/postgresql/ #container dockerfile path
+    restart: always #kapansa bile yeniden açılmasını sağlıyor
+    env_file: .env #environment path
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.5
+    ports:
+      - "5432:5432"
+
+
+  webapi:
+    container_name: webapi
+    build: requirements/webapi/
+    restart: always
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.6
+    env_file: .env
+    volumes:
+      - webapii:/home/omeryumusak/webapi
+    depends_on:
+      - postgresql
+    ports:
+      - "3000"
+      - "2224:22"
+
+  frontend:
+    container_name: frontend
+    build: requirements/frontend/
+    restart: always
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.7
+    env_file: .env
+    volumes:
+      - frontendd:/home/omeryumusak/frontend
+    ports:
+      - "3000"
+      - "2223:22"
+
+  nginx:
+    container_name: nginx
+    build: ./requirements/nginx/
+    restart: always
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.4 
+    depends_on:
+      - webapi
+      - frontend
+    volumes:
+      - frontendd:/frontend
+    ports:
+      - "443:443"
+      - "80:80" # local port / exported port

@@ -1,0 +1,60 @@
+server {
+	listen 80;
+	listen [::]:80;
+
+	server_name api.42student.com;
+
+	client_max_body_size 64M;
+
+	location / {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $host;
+        proxy_pass http://10.5.0.6:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+	}
+
+	# pass PHP scripts to FastCGI server
+	#
+	#location ~ \.php$ {
+	#	include snippets/fastcgi-php.conf;
+	#
+	#	# With php-fpm (or other unix sockets):
+	#	fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+	#	# With php-cgi (or other tcp sockets):
+	#	fastcgi_pass 127.0.0.1:9000;
+	#}
+
+	# deny access to .htaccess files, if Apache's document root
+	# concurs with nginx's one
+	#
+	#location ~ /\.ht {
+	#	deny all;
+	#}
+}
+
+server {
+    listen 80;
+    server_name 42student.com; # Kullanmak istediğiniz domain adını buraya yazın
+
+    root /frontend/dist; # dist klasörünüzün sunucudaki tam yolunu yazın
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    error_page 404 /index.html;
+
+    location ~* \.(?:ico|css|js|gif|jpe?g|png)$ {
+        expires max;
+        add_header Pragma public;
+        add_header Cache-Control "public, must-revalidate, proxy-revalidate";
+    }
+
+    gzip on;
+    gzip_vary on;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml application/json application/javascript application/rss+xml application/atom+xml image/svg+xml;
+}

@@ -1,0 +1,89 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://hiqermod:123@10.5.0.5:5432/omer_db?schema=public"
+}
+
+model User {
+  id             Int                @id @default(autoincrement())
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+  email          String             @unique
+  hash           String             @default("empty")
+  firstName      String
+  lastName       String
+  userName       String
+  profilePicture String             @default("DefaultPicture")
+  winCount       Int                @default(0)
+  lossCount      Int                @default(0)
+  chatRooms      RoomsOnChatUsers[]
+  gameHistoryes  GameHistory[]
+  friends        Friends[]
+  blockedUsersId  Int[]
+  Authenticator Boolean             @default(false)
+  secret        String              @default("empty")
+}
+
+model ChatRoom {
+  id           Int                @id @unique @default(autoincrement())
+  roomName     String
+  roomPass     String?
+  roomOwnerId  Int
+  chatUsers    RoomsOnChatUsers[]
+  blockedUsers BlockedUsers[]
+  mutedUsers   MutedUsers[]
+}
+
+model BlockedUsers {
+  id         Int      @id @default(autoincrement())
+  chatRoom   ChatRoom @relation(fields: [chatRoomId], references: [id], onDelete: Cascade)
+  chatRoomId Int
+  bannedUserId Int
+  finishTime   Int
+}
+
+
+model MutedUsers {
+  id         Int      @id @default(autoincrement())
+  chatRoom   ChatRoom @relation(fields: [chatRoomId], references: [id], onDelete: Cascade)
+  chatRoomId Int
+  mutedUserId Int
+}
+
+
+model RoomsOnChatUsers {
+  chatRoom   ChatRoom @relation(fields: [chatRoomId], references: [id], onDelete: Cascade)
+  chatRoomId Int // relation scalar field (used in the `@relation` attribute above)
+  chatUser   User     @relation(fields: [chatUserId], references: [id], onDelete: Cascade)
+  chatUserId Int // relation scalar field (used in the `@relation` attribute above)
+  power      Int
+
+
+  @@id([chatRoomId, chatUserId])
+}
+
+model GameHistory {
+  id             Int      @id @default(autoincrement())
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         Int
+  myScore        Int
+  otherUserId    Int
+  otherUserScore Int
+  won            Boolean
+  matchDate      DateTime @default(now())
+}
+
+model Friends {
+  id     Int  @id @default(autoincrement())
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId Int
+
+  friendId Int
+  state    Int
+}

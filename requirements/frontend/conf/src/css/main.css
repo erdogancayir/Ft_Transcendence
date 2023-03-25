@@ -1,0 +1,180 @@
+.deneme
+{
+    background-color: black;
+    display: none;
+}
+.roomdiv{
+
+}
+
+.href{
+    text-decoration: none; color : black; text-shadow: 0px 0px 10px #ffffff; width: 100%;
+}
+.leave{
+    width: 100%; background-color: rgba(255, 0, 0, 1); border-bottom-left-radius: 60px; border-bottom-right-radius: 60px;  margin-top: -5px;
+}
+.chatroomdiv
+{
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 50px;
+    background: rgba(255,255,255, 0.1);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.sendmessage_div{
+    display: flex; /* Öğeleri yatay hizala */
+    justify-content: center; /* Öğeleri merkezde hizala */
+    align-items: center; /* Öğeleri dikeyde ortala */
+    padding: 10px; /* İçeriği çevreleyen boşluk */
+    border: 1px solid #ccc; /* Kenarlık */
+    border-radius: 5px; /* Köşeleri yuvarla */
+	width: 100%;
+}
+
+.sendmessage_button
+{
+	background-color: #4CAF50; /* Arkaplan rengi */
+    color: white; /* Metin rengi */
+    border: none; /* Kenarlık yok */
+    border-radius: 3px; /* Köşeleri yuvarla */
+    padding: 8px 16px; /* İçerik ile kenarlık arasındaki boşluk */
+    margin-left: 5px; /* Buton ile input arasındaki boşluk */
+    box-shadow: 1px 1px 1px #ccc; /* Hafif bir gölge */
+    cursor: pointer; /* Üzerine gelince imleç şekli */
+	/*
+    width: 120px;
+    height: 60px;
+	*/
+}
+.sendmessage_input
+{
+	padding: 8px; /* İçerik ile kenarlık arasındaki boşluk */
+    border: none; /* Kenarlık yok */
+    border-radius: 3px; /* Köşeleri yuvarla */
+    box-shadow: 1px 1px 1px #ccc; /* Hafif bir gölge */
+	/*
+    width:70%; 
+    border-style: solid none solid none; 
+    border-width: 5px; 
+    border-radius: 25px; 
+    border-color:purple; 
+    padding: 15px;
+	*/
+}
+
+.chatbg
+{
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+
+/* kaydırma çubuğu */
+::-webkit-scrollbar {
+	width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+	background-color: #f2f2f2;
+	border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+	background-color: #ccc;
+	border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+	background-color: #aaa;
+  }
+
+  
+  .message {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    direction: ltr;
+	display: flex;
+	margin-bottom: 10px;
+	max-width: 70%;
+	border-radius: 10px;
+	padding: 10px;
+  height: auto;
+  }
+
+
+
+  .message-container {
+	display: flex;
+	flex-direction: column;
+  }
+  /*
+  .message {
+	display: flex;
+	margin-bottom: 10px;
+	max-width: 70%;
+	border-radius: 10px;
+	padding: 10px;
+  }
+  */
+  .outgoing-message {
+	align-self: flex-end;
+	background-color: #2ecc71;
+	color: white;
+	animation: message-animationout 0.5s ease-out;
+  }
+  @keyframes message-animationout {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .incoming-message {
+	align-self: flex-start;
+	background-color: #ecf0f1;
+	color: black;
+	animation: message-animationin 0.5s ease-out;
+  }
+  @keyframes message-animationin {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .message-content {
+	margin-right: 10px;
+  }
+  
+  .message-sender {
+	font-size: 12px;
+	color: #aaa;
+	align-self: flex-end;
+  }
+  
+  .message-sender span {
+	font-weight: bold;
+  }
