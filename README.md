@@ -15,14 +15,14 @@ FT_Transcendence is a full-stack web application built as part of the 42 École 
 
 ### Technologies
 
-NestJs: Web framework for backend development <br>
-PostgreSQL: Database management system <br>
-WebSockets: Real-time communication between the client and the server <br>
-VueJs: TypeScript library for frontend development ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)<br>
+![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)NestJs: Web framework for backend development <br>
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)PostgreSQL: Database management system <br>
+![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)WebSockets: Real-time communication between the client and the server <br>
+![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)VueJs: TypeScript library for frontend development <br>
 W3School: CSS framework for styling and responsive design <br>
-Git: Version control system <br>
-GitHub: Code repository and collaboration platform <br>
-Docker: Containerization platform for deployment <br>
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)Git: Version control system <br>
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)GitHub: Code repository and collaboration platform <br>
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)Docker: Containerization platform for deployment <br>
 
 ### Installation<br>
 Clone the repository to your local machine:<br>
