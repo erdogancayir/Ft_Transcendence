@@ -9,10 +9,10 @@
 5. Features
 6. Contributors
 
-Description
+### Description
 FT_Transcendence is a full-stack web application built as part of the 42 École curriculum. The goal of this project is to provide an environment where users can communicate, collaborate, and compete in various online games. The application is built using modern web technologies and adheres to best practices in web development.
 
-Technologies
+### Technologies
 
 NestJs: Web framework for backend development <br>
 PostgreSQL: Database management system <br>
@@ -23,7 +23,7 @@ Git: Version control system <br>
 GitHub: Code repository and collaboration platform <br>
 Docker: Containerization platform for deployment <br>
 
-#Installation<br>
+### Installation<br>
 Clone the repository to your local machine:<br>
 ```git clone https://github.com/user/ft_transcendence.git```<br>
 
