@@ -14,14 +14,14 @@ FT_Transcendence is a full-stack web application built as part of the 42 École 
 
 Technologies
 
-NestJs: Web framework for backend development
-PostgreSQL: Database management system
-WebSockets: Real-time communication between the client and the server
-VueJs: TypeScript library for frontend development
-W3School: CSS framework for styling and responsive design
-Git: Version control system
-GitHub: Code repository and collaboration platform
-Docker: Containerization platform for deployment
+NestJs: Web framework for backend development <br>
+PostgreSQL: Database management system <br>
+WebSockets: Real-time communication between the client and the server <br>
+VueJs: TypeScript library for frontend development <br>
+W3School: CSS framework for styling and responsive design <br>
+Git: Version control system <br>
+GitHub: Code repository and collaboration platform <br>
+Docker: Containerization platform for deployment <br>
 
 #Installation
 Clone the repository to your local machine:
