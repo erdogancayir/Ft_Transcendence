@@ -23,25 +23,25 @@ Git: Version control system <br>
 GitHub: Code repository and collaboration platform <br>
 Docker: Containerization platform for deployment <br>
 
-#Installation
-Clone the repository to your local machine:
-```git clone https://github.com/user/ft_transcendence.git```
+#Installation<br>
+Clone the repository to your local machine:<br>
+```git clone https://github.com/user/ft_transcendence.git```<br>
 
-Features
+Features<br>
 
-User authentication and authorization with 42 OAuth
-Public and private chat rooms
-Direct messaging between users
-User profiles with avatars, statuses, and customizable display names
-Online games, such as Pong and Chess
-Real-time updates and notifications for messages and game events
-Admin dashboard with user management and moderation tools
+User authentication and authorization with 42 OAuth<br>
+Public and private chat rooms<br>
+Direct messaging between users<br>
+User profiles with avatars, statuses, and customizable display names<br>
+Online games, such as Pong and Chess<br>
+Real-time updates and notifications for messages and game events<br>
+Admin dashboard with user management and moderation tools<br>
 
 
-Contributors
-https://github.com/erdogancayir
-https://github.com/canodis
-https://github.com/hiqermod
-https://github.com/omer0909
+Contributors<br>
+https://github.com/erdogancayir<br>
+https://github.com/canodis<br>
+https://github.com/hiqermod<br>
+https://github.com/omer0909<br>
 
-We welcome contributions! If you'd like to help improve FT_Transcendence, please feel free to create a pull request or open an issue on GitHub.
+We welcome contributions! If you'd like to help improve FT_Transcendence, please feel free to create a pull request or open an issue on GitHub.<br>
