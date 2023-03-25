@@ -25,6 +25,8 @@ Docker: Containerization platform for deployment <br>
 ### Installation<br>
 Clone the repository to your local machine:<br>
 ```git clone https://github.com/user/ft_transcendence.git```<br>
+```cd ft_transcendence```<br>
+```make all```<br>
 
 ### Features<br>
 
