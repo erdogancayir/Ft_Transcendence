@@ -34,12 +34,12 @@ Clone the repository to your local machine:<br>
 
 1. User authentication and authorization with 42 OAuth<br>
 2. Public and private chat rooms<br>
-3.Direct messaging between users<br>
+3. Direct messaging between users<br>
 4. User profiles with avatars, statuses, and customizable display names<br>
 5. Online games, such as Pong and Chess<br>
 6. Real-time updates and notifications for messages and game events<br>
-7.Admin dashboard with user management and moderation tools<br>
-8.Authenticator with Qr Code (collapsible)
+7. Admin dashboard with user management and moderation tools<br>
+8. Authenticator with Qr Code (collapsible)
 
 ### Contributors<br>
 https://github.com/erdogancayir<br>
