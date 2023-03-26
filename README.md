@@ -1,7 +1,7 @@
 # FT_Transcendence
 
 42 École Project: FT_Transcendence is a web application that aims to create a fun and interactive platform for the 42 community, combining chat rooms, direct messaging, and online games. This project is a collaboration between students, and encourages teamwork and creativity.
-
+a
 
 1. Description
 2. Technologies
