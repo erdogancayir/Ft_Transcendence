@@ -29,7 +29,7 @@ Clone the repository to your local machine:<br>
 ```git clone https://github.com/user/ft_transcendence.git```<br>
 ```cd ft_transcendence```<br>
 ```make all```<br>
-
+ 
 ### Features<br>
 
 1. User authentication and authorization with 42 OAuth<br>
